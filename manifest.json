@@ -1,0 +1,193 @@
+{
+  "name": "app-convertapi",
+  "version": "1.0.0",
+  "description": "App ConvertAPI - Conversão de arquivos via ConvertAPI",
+  "auth": {
+    "description": {
+      "title": "Token de acesso à API do ConvertAPI",
+      "body": "Para utilizar esta aplicação, é necessário obter um token de acesso à API do ConvertAPI.",
+      "footer": "Token necessário para autenticação",
+      "link": "https://www.convertapi.com/a/authentication"
+    },
+    "params": [
+      {
+        "name": "convertapiToken",
+        "type": "string",
+        "inputType": "password",
+        "required": true,
+        "label": "Token ConvertAPI"
+      }
+    ]
+  },
+  "functions": {
+    "converterDocParaPDF": {
+      "name": "Converter DOCX para PDF",
+      "icon": "Description",
+      "script": "dist/converterDocParaPDF.js",
+      "description": "Converte arquivos DOCX para PDF.",
+      "category": "conversao",
+      "params": [
+        {
+          "name": "file",
+          "type": "file",
+          "inputType": "textarea",
+          "required": true,
+          "label": "Arquivo DOCX"
+        }
+      ],
+      "help": {
+        "title": "Como usar a função converterDocParaPDF",
+        "body": "Selecione o arquivo DOCX. O arquivo convertido será disponibilizado via URL.",
+        "footer": "Consulte os formatos suportados em https://www.convertapi.com/conversionformats"
+      }
+    },
+    "converterPDFParaJPG": {
+      "name": "Converter PDF para JPG",
+      "icon": "FileText",
+      "script": "dist/converterPDFParaJPG.js",
+      "description": "Converte arquivos PDF para imagens JPG.",
+      "category": "conversao",
+      "params": [
+        {
+          "name": "file",
+          "type": "file",
+          "inputType": "textarea",
+          "required": true,
+          "label": "Arquivo PDF"
+        }
+      ],
+      "help": {
+        "title": "Como usar a função converterPDFParaJPG",
+        "body": "Selecione o arquivo PDF. O arquivo convertido será disponibilizado via URL.",
+        "footer": "Consulte os formatos suportados em https://www.convertapi.com/conversionformats"
+      }
+    },
+    "converterPPTXParaPDF": {
+      "name": "Converter PPTX para PDF",
+      "icon": "Images",
+      "script": "dist/converterPPTXParaPDF.js",
+      "description": "Converte arquivos PPTX para PDF.",
+      "category": "conversao",
+      "params": [
+        {
+          "name": "file",
+          "type": "file",
+          "inputType": "textarea",
+          "required": true,
+          "label": "Arquivo PPTX"
+        }
+      ],
+      "help": {
+        "title": "Como usar a função converterPPTXParaPDF",
+        "body": "Selecione o arquivo PPTX. O arquivo convertido será disponibilizado via URL.",
+        "footer": "Consulte os formatos suportados em https://www.convertapi.com/conversionformats"
+      }
+    },
+    "converterXLSXParaPDF": {
+      "name": "Converter XLSX para PDF",
+      "icon": "FileText",
+      "script": "dist/converterXLSXParaPDF.js",
+      "description": "Converte arquivos XLSX para PDF.",
+      "category": "conversao",
+      "params": [
+        {
+          "name": "file",
+          "type": "file",
+          "inputType": "textarea",
+          "required": true,
+          "label": "Arquivo XLSX"
+        }
+      ],
+      "help": {
+        "title": "Como usar a função converterXLSXParaPDF",
+        "body": "Selecione o arquivo XLSX. O arquivo convertido será disponibilizado via URL.",
+        "footer": "Consulte os formatos suportados em https://www.convertapi.com/conversionformats"
+      }
+    },
+    "converterImagemParaPDF": {
+      "name": "Converter Imagem para PDF",
+      "icon": "FileText",
+      "script": "dist/converterImagemParaPDF.js",
+      "description": "Converte arquivos de imagem (JPG) para PDF.",
+      "category": "conversao",
+      "params": [
+        {
+          "name": "file",
+          "type": "file",
+          "inputType": "textarea",
+          "required": true,
+          "label": "Arquivo de imagem (JPG)"
+        }
+      ],
+      "help": {
+        "title": "Como usar a função converterImagemParaPDF",
+        "body": "Selecione o arquivo de imagem JPG. O arquivo convertido será disponibilizado via URL.",
+        "footer": "Consulte os formatos suportados em https://www.convertapi.com/conversionformats"
+      }
+    },
+    "converterGenerico": {
+      "name": "Conversão Avançada (Genérica)",
+      "icon": "FileText",
+      "script": "dist/converterGenerico.js",
+      "description": "Converte arquivos entre formatos diversos, com parâmetros avançados.",
+      "category": "conversao",
+      "params": [
+        {
+          "name": "file",
+          "type": "file",
+          "inputType": "textarea",
+          "required": true,
+          "label": "Arquivo para converter"
+        },
+        {
+          "name": "fromFormat",
+          "type": "string",
+          "inputType": "select",
+          "required": true,
+          "label": "Formato de origem (ex: docx, pdf, pptx, xlsx, jpg)",
+          "options": [
+            {
+              "label": "DOCX",
+              "value": "docx"
+            },
+            {
+              "label": "PDF",
+              "value": "pdf"
+            },
+            {
+              "label": "PPTX",
+              "value": "pptx"
+            },
+            {
+              "label": "XLSX",
+              "value": "xlsx"
+            },
+            {
+              "label": "JPG",
+              "value": "jpg"
+            }
+          ]
+        },
+        {
+          "name": "toFormat",
+          "type": "string",
+          "inputType": "text",
+          "required": true,
+          "label": "Formato de destino (ex: pdf, jpg, docx, xlsx)"
+        },
+        {
+          "name": "extraParams",
+          "type": "object",
+          "inputType": "json",
+          "required": false,
+          "label": "Parâmetros extras de conversão (JSON)"
+        }
+      ],
+      "help": {
+        "title": "Como usar a função converterGenerico",
+        "body": "Selecione o arquivo, informe os formatos e os parâmetros extras em JSON conforme a documentação do ConvertAPI.",
+        "footer": "Veja exemplos de parâmetros extras em https://www.convertapi.com/conversionformats"
+      }
+    }
+  }
+}
