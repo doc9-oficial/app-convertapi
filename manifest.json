@@ -21,11 +21,11 @@
   },
   "functions": {
     "converterDocParaPDF": {
-      "name": "Converter DOCX para PDF",
+      "name": "ConvertAPI - Converter DOCX para PDF",
       "icon": "Description",
       "script": "dist/converterDocParaPDF.js",
       "description": "Converte arquivos DOCX para PDF.",
-      "category": "conversao",
+      "category": "util",
       "params": [
         {
           "name": "file",
@@ -42,11 +42,11 @@
       }
     },
     "converterPDFParaJPG": {
-      "name": "Converter PDF para JPG",
+      "name": "ConvertAPI - Converter PDF para JPG",
       "icon": "FileText",
       "script": "dist/converterPDFParaJPG.js",
       "description": "Converte arquivos PDF para imagens JPG.",
-      "category": "conversao",
+      "category": "util",
       "params": [
         {
           "name": "file",
@@ -63,11 +63,11 @@
       }
     },
     "converterPPTXParaPDF": {
-      "name": "Converter PPTX para PDF",
+      "name": "ConvertAPI - Converter PPTX para PDF",
       "icon": "Images",
       "script": "dist/converterPPTXParaPDF.js",
       "description": "Converte arquivos PPTX para PDF.",
-      "category": "conversao",
+      "category": "util",
       "params": [
         {
           "name": "file",
@@ -84,11 +84,11 @@
       }
     },
     "converterXLSXParaPDF": {
-      "name": "Converter XLSX para PDF",
+      "name": "ConvertAPI - Converter XLSX para PDF",
       "icon": "FileText",
       "script": "dist/converterXLSXParaPDF.js",
       "description": "Converte arquivos XLSX para PDF.",
-      "category": "conversao",
+      "category": "util",
       "params": [
         {
           "name": "file",
@@ -105,11 +105,11 @@
       }
     },
     "converterImagemParaPDF": {
-      "name": "Converter Imagem para PDF",
+      "name": "ConvertAPI - Converter Imagem para PDF",
       "icon": "FileText",
       "script": "dist/converterImagemParaPDF.js",
       "description": "Converte arquivos de imagem (JPG) para PDF.",
-      "category": "conversao",
+      "category": "util",
       "params": [
         {
           "name": "file",
@@ -126,11 +126,11 @@
       }
     },
     "converterGenerico": {
-      "name": "Conversão Avançada (Genérica)",
+      "name": "ConvertAPI - Conversão Avançada (Genérica)",
       "icon": "FileText",
       "script": "dist/converterGenerico.js",
       "description": "Converte arquivos entre formatos diversos, com parâmetros avançados.",
-      "category": "conversao",
+      "category": "util",
       "params": [
         {
           "name": "file",
