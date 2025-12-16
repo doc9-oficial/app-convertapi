@@ -22,7 +22,7 @@
   "functions": {
     "converterDocParaPDF": {
       "name": "ConvertAPI - Converter DOCX para PDF",
-      "icon": "Description",
+      "icon": "Pen",
       "script": "dist/converterDocParaPDF.js",
       "description": "Converte arquivos DOCX para PDF.",
       "category": "util",
